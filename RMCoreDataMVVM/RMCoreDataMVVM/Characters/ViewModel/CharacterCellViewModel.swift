@@ -21,12 +21,12 @@ struct CharacterCellViewModel: CharacterCellViewModelProtocol {
 
     init(character: Entity, image: UIImage?) {
         self.image = image
-        self.name = character.name ?? ""
-        self.speciesAndGender = "\(character.species ?? ""), \(character.gender ?? "")"
+        self.name = character.name
+        self.speciesAndGender = "\(character.species), \(character.gender)"
         self.buttonTitle = "▶ Watch episodes"
         self.markerImage = UIImage(named: "marker")
-        self.location = character.location ?? ""
-        self.status = character.status ?? ""
+        self.location = character.location
+        self.status = character.status
         self.statusBackgroundColor = UIColor()
         self.statusTextColor = UIColor()
 

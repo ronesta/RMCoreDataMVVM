@@ -61,7 +61,7 @@ public final class CoreDataManager: NSObject, StorageManagerProtocol {
             entity.name = name
             entity.species = species
             entity.status = status
-            entity.imageData = imageData
+            entity.imageData = imageData ?? Data()
 
             saveContext()
         } catch {
